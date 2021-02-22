@@ -1,0 +1,161 @@
+.slider__list {
+    width: 320px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    @media (min-width: $tablet-width) {
+        width: auto;
+        height: 462px;
+        margin-top: 195px;
+        padding: 0;
+        background-color: $grey-ea;
+    }
+    @media (min-width: $desktop-width) {
+        width: 690px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: -194px;
+        background-color: transparent;
+    }
+}
+
+.slider__item {
+    margin: 0 auto;
+    @media (min-width: $tablet-width) {
+        width: 708px;
+        position: relative;
+        top: -167px;
+        margin-bottom: -167px;
+    }
+    @media (min-width: $desktop-width) {
+        top: 0;
+        margin: 0;
+        width: 690px;
+    }
+}
+
+.slider__image {
+    width: 320px;
+    height: 240px;
+    &--slim {
+        display: none;
+    }
+    @media (min-width: $tablet-width) {
+        width: 708px;
+        height: 517px;
+    }
+    @media (min-width: $desktop-width) {
+        width: 690px;
+        height: 517px;
+    }
+}
+
+.slider__range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 228px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 23px;
+    padding-left: 16px;
+    padding-right: 12px;
+    @media (min-width: $tablet-width) {
+        width: 572px;
+        justify-content: space-between;
+        margin-top: 8px;
+        margin-bottom: 64px;
+        padding: 0;
+    }
+    @media (min-width: $desktop-width) {
+        width: 572px;
+        margin-top: 30px;
+        margin-left: 77px;
+    }
+}
+
+.slider__button {
+    font-family: $oswald;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    padding: 0;
+    display: block;
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;
+        border-bottom: 1px dotted $black;
+        border-color: rgba(0, 0, 0, 0.24);
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid;
+            border-color: (opacity($color: 0.4));
+        }
+        &:active {
+            border-bottom: none;
+        }
+    }
+}
+
+.slider__bar {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    &::before,
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+    }
+    &::before {
+        width: 84px;
+        height: 14px;
+        top: -10px;
+        left: -42px;
+        border: 1px solid $special-grey;
+        border-radius: 6px;
+        background-color: $white;
+    }
+    &::after {
+        width: 35px;
+        height: 6px;
+        top: -6px;
+        left: -36px;
+        background-color: $green;
+        border-radius: 6px;
+    }
+    @media (min-width: $tablet-width) {
+        &::before {
+            width: 428px;
+            height: 6px;
+            top: 0;
+            left: -214px;
+            border-radius: 6px;
+            background-color: $special-grey-3;
+        }
+        &::after {
+            width: 34px;
+            height: 34px;
+            top: -15px;
+            left: -214px;
+            border-radius: 50%;
+            border: 1px solid $special-grey;
+            background-color: $white;
+            background-image: url("../img/slider-control.svg");
+            background-size: 8px 8px;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 0 1px $special-grey, 0 1px 3px rgba(0, 0, 0, 0.16);
+            &:hover,
+            &:focus {
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
+            }
+            &:active {
+                border-color: 2px solid $green;
+            }
+        }
+    }
+}

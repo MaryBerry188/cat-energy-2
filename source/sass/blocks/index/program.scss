@@ -1,0 +1,270 @@
+.program {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 22px;
+    @media (min-width: $tablet-width) {
+        width: 708px;
+        margin-top: 0;
+    }
+    @media (min-width: $desktop-width) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1220px;
+    }
+}
+
+.program__item {
+    width: 280px;
+    margin-bottom: 20px;
+    min-height: 266px;
+    background-color: $grey-f2;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @media (min-width: $tablet-width) {
+        min-height: 372px;
+        width: 708px;
+        margin: 0;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media (min-width: $desktop-width) {
+        width: 570px;
+        margin: 0;
+    }
+}
+
+.program__wrapper {
+    width: 240px;
+    margin: 0 auto;
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 52px;
+        width: 708px;
+    }
+    @media (min-width: $desktop-width) {
+        flex-direction: column;
+        width: 570px;
+        padding-left: 52px;
+    }
+}
+
+.program__headline {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $black;
+    margin-top: 30px;
+    margin-left: 71px;
+    margin-bottom: 29px;
+    position: relative;
+    &--slim::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: -9px;
+        left: -61px;
+        width: 36px;
+        height: 50px;
+        background-image: url("../img/icon-cat-slim.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &--gain::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 5px;
+        left: -77px;
+        width: 67px;
+        height: 28px;
+        background-image: url("../img/icon-cat-pro.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: $tablet-width) {
+        margin: 0;
+        font-size: 36px;
+        line-height: 36px;
+        margin-top: 74px;
+        margin-bottom: 24px;
+        &--slim::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 5px;
+            left: 423px;
+            width: 140px;
+            height: 192px;
+            background-image: url("../img/icon-cat-slim.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &--gain::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 59px;
+            left: 360px;
+            width: 268px;
+            height: 112px;
+            background-image: url("../img/icon-cat-pro.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    @media (min-width: $desktop-width) {
+        margin-left: 162px;
+        margin-top: 77px;
+        margin-bottom: 73px;
+        &--slim::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: -36px;
+            left: -147px;
+            width: 70px;
+            height: 97px;
+            background-image: url("../img/icon-cat-slim.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &--gain::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: -10px;
+            left: -181px;
+            width: 134px;
+            height: 56px;
+            background-image: url("../img/icon-cat-pro.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.program__text {
+    font-family: $arial;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: none;
+    color: $grey;
+    width: 227px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $light-grey;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: -72px;
+        left: 2px;
+        background-color: $green;
+    }
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        margin-bottom: 52px;
+        min-height: 96px;
+        padding: 0;
+        border: none;
+        width: 377px;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            top: -43px;
+            left: 394px;
+            background-color: $green;
+        }
+        &--gain {
+            width: 342px;
+        }
+    }
+    @media (min-width: $desktop-width) {
+        width: 467px;
+        margin: 0;
+        padding: 0;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            top: -139px;
+            left: 0;
+            background-color: $green;
+        }
+        &--gain {
+            width: 457px;
+        }
+    }
+}
+
+.program__link {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    color: $black;
+    margin-top: 19px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -2px;
+        left: 100px;
+        width: 32px;
+        height: 18px;
+        background: url("../img/icon-right-arrow-long.svg") no-repeat;
+        background-position: left;
+        background-size: 24px 11px;
+    }
+    &:hover::after {
+        background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+        background-position: left;
+        background-size: 32px 11px;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+    @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+        &::after {
+            top: 5px;
+            left: 130px;
+        }
+        &:hover::after {
+            top: 5px;
+            left: 130px;
+        }
+    }
+}

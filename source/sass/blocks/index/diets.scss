@@ -1,0 +1,192 @@
+.diets {
+    margin-bottom: 42px;
+    @media (min-width: $tablet-width) {
+        margin: 0;
+        border-bottom: 1px solid $grey-menu;
+    }
+    @media (min-width: $desktop-width) {
+        border: none;
+    }
+}
+
+.diets__wrap {
+    width: 280px;
+    margin: 0 auto;
+    @media (min-width: $tablet-width) {
+        margin-bottom: 47px;
+        width: 708px;
+    }
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+        width: 1220px;
+    }
+}
+
+.diets__headline {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 27px;
+    margin-bottom: 38px;
+    @media (min-width: $tablet-width) {
+        font-size: 60px;
+        line-height: 60px;
+        margin-top: 43px;
+        margin-bottom: 32px;
+    }
+    @media (min-width: $desktop-width) {
+        margin-top: 71px;
+    }
+}
+
+.diets__list {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+    }
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.diets__item {
+    margin-bottom: 20px;
+    min-height: 60px;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: $green;
+    }
+    &--healthy::before {
+        background-image: url("../img/advantage-leaf@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &--form::before {
+        background-image: url("../img/advantage-powder@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &--eat::before {
+        background-image: url("../img/advantage-dining@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &--time::before {
+        background-image: url("../img/advantage-clock@1x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    @media (min-resolution: 2dppx) {
+        &--healthy::before {
+            background-image: url("../img/advantage-leaf@2x.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px 50px;
+        }
+        &--form::before {
+            background-image: url("../img/advantage-powder@2x.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px 50px;
+        }
+        &--eat::before {
+            background-image: url("../img/advantage-dining@2x.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px 50px;
+        }
+        &--time::before {
+            background-image: url("../img/advantage-clock@2x.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50px 50px;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        min-height: 280px;
+        width: 249px;
+        margin: 0;
+        margin-bottom: 37px;
+        &--healthy {
+            width: 230px;
+        }
+        &--time {
+            margin-bottom: 0;
+            margin-left: 30px;
+        }
+        &--eat {
+            margin-bottom: 0;
+        }
+        &--form {
+            margin-left: 30px;
+        }
+        &::before {
+            top: 40px;
+            width: 80px;
+            height: 80px;
+        }
+    }
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        &--healthy {
+            margin-right: 20px;
+        }
+        &--form {
+            width: 246px;
+        }
+    }
+}
+
+.diets__text {
+    font-family: $arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: none;
+    color: $grey;
+    padding-left: 80px;
+    margin: 0;
+    @media (max-width: $mobile-width-only) {
+        br {
+            display: none;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 0;
+        padding-top: 151px;
+    }
+}
+
+.diets__item-num {
+    display: none;
+    @media (min-width: $tablet-width) {
+        display: block;
+        position: absolute;
+        z-index: -20;
+        font-size: 280px;
+        line-height: 280px;
+        color: $grey-f2;
+        right: 0;
+    }
+}

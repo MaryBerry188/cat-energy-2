@@ -1,0 +1,39 @@
+.copy__link {
+    display: block;
+    font-family: $arial;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+    text-decoration: none;
+    color: $grey;
+    &:hover {
+        .copy__logo {
+            fill: $green;
+        }
+    }
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+
+.copy__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    @media (min-width: $tablet-width) {
+        width: 163px;
+        height: 34px;
+    }
+}
+
+.copy__logo {
+    width: 42px;
+    height: 42px;
+    fill: $special-grey-2;
+    position: relative;
+    right: -7px;
+    top: 3px;
+}

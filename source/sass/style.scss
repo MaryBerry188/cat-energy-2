@@ -1,0 +1,29 @@
+@import "utils/variables.scss";
+@import "utils/visually-hidden.scss";
+@import "utils/container";
+@import "utils/fonts.scss";
+///
+@import "blocks/general/button.scss";
+@import "blocks/general/contacts.scss";
+@import "blocks/general/copyright.scss";
+@import "blocks/general/main-nav.scss";
+@import "blocks/general/page-footer.scss";
+@import "blocks/general/page-header.scss";
+@import "blocks/general/socials.scss";
+@import "blocks/general/site-nav.scss";
+@import "blocks/general/page-body.scss";
+@import "blocks/general/map.scss";
+@import "blocks/general/page-title.scss";
+///
+@import "blocks/index/diets";
+@import "blocks/index/promo.scss";
+@import "blocks/index/example.scss";
+@import "blocks/index/program.scss";
+@import "blocks/index/statistic.scss";
+@import "blocks/index/slider.scss";
+///
+@import "blocks/catalog/extra.scss";
+@import "blocks/catalog/gift.scss";
+@import "blocks/catalog/catalog.scss";
+///
+@import "blocks/forms/form.scss";
